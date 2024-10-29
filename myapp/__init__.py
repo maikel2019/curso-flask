@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
 from myapp.task.controllers import taskRoute
 
@@ -11,4 +11,4 @@ app.config.from_object(DevConfig)
 
 @app.route("/")
 def hello_world() -> str:
-     return "Hello mundoo 2233!!"
+     return render_template('index.html')
